@@ -3,6 +3,17 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+import sys
+import time
+from PySide6.QtWidgets import QApplication, QMainWindow
+from design import Ui_MainWindow
+
+class Robert(QMainWindow):
+	def __init__(self):
+		super(Robert, self).__init__()
+		self.ui = Ui_MainWindow()
+		self.ui.setupUi(self)
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -12,5 +23,10 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
+    app = QApplication(sys.argv)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    window = Robert()
+    window.show()
+
+    sys.exit(app.exec())
+
