@@ -26,6 +26,7 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
 
     window = Robert()
+    window.ui.pushButton.clicked.connect(app.quit)
     window.show()
 
     sys.exit(app.exec())
